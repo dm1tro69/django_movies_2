@@ -4,6 +4,7 @@
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/django_movie_template" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/sebsite/django_movie_template" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/website/django-allauth" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/website/django_movie" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/website/django_movie_template" vcs="Git" />
   </component>

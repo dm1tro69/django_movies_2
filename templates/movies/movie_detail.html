@@ -34,7 +34,7 @@
                     <li style="list-style: none">
                         <span><b>Режиссер:</b>
                             {% for director in movie.directors.all %}
-                                <a href="{{ director.get_absolute_url }}">
+                                <a href="{% url 'actor_detail' director.name %}">
                                     {{ director.name }}
                                 </a>
                             {% endfor %}
@@ -42,7 +42,7 @@
                     </li>
                     <li style="list-style: none"><span><b>Актеры:</b>
                         {% for actor in movie.actors.all %}
-                            <a href="{{ actor.get_absolute_url }}">
+                            <a href="{% url 'actor_detail' actor.name %}">
                                     {{ actor.name }}
                             </a>
                         {% endfor %}
@@ -178,20 +178,20 @@
                             <label for="contactcomment" class="editContent">
                                 Ваш комментарий *
                             </label>
-                            <textarea name="text" id="contactcomment"></textarea>
+                            {{ form.text }}
                         </div>
                         <div class="d-sm-flex">
                             <div class="col-sm-6 form-group p-0 editContent">
                                 <label for="contactusername" class="editContent">
                                     Имя *
                                 </label>
-                                <input type="text" class="form-control border" name="name">
+                               {{ form.name }}
                             </div>
                             <div class="col-sm-6 form-group ml-sm-3 editContent">
                                 <label for="contactemail" class="editContent">
                                     Email *
                                 </label>
-                                <input type="text" class="form-control border" name="email">
+                                {{ form.email }}
                             </div>
                             {{ form.captcha }}
                         </div>
